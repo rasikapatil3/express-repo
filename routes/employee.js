@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
 connection.connect();
 empRouter.get("/",(request,response)=>{
     var queryText=`select * from employee`;
+    console.log(queryText);
     connection.query(queryText,(err,result)=>{
         connection.end();
         if(err == null)
