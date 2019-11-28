@@ -15,11 +15,11 @@ empRouter.get("/",(request,response)=>{
         connection.end();
         if(err == null)
         {
-            response.send(result);
+            response.send(JSON.stringify(result));
         }
         else
         {
-            response.send(err);
+            response.send(JSON.stringify(err));
         }
     })
 
