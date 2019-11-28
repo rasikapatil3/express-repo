@@ -24,4 +24,20 @@ empRouter.get("/",(request,response)=>{
     })
 
 })
+empRouter.get("/:id",(request,response)=>{
+    var id=request.params.id;
+    var queryText=`select * from employee where id=${id}`;
+    connection.query(queryText,(err,result)=>{
+        connection.end();
+        if(err == null)
+        {
+            response.send(JSON.stringify(result));
+        }
+        else
+        {
+            response.send(JSON.stringify(err));
+        }
+    })
+
+})
 module.exports=empRouter;
