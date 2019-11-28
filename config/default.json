@@ -1,0 +1,7 @@
+{
+    "host":"localhost",
+    "database":"dac_db",
+    "user":"dac",
+    "password":"DAC",
+    "port":3306
+}
